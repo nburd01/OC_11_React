@@ -1,6 +1,6 @@
 import Banner from "./Banner";
-import "../styles/App.css";
-import "../styles/Banner.css";
+import "../styles/App.scss";
+import "../styles/Banner.scss";
 
 function App() {
   return <Banner />;
