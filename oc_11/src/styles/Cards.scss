@@ -1,0 +1,21 @@
+.cards-container{
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: repeat(var(--items-per-row, 3), 1fr);
+    gap: 16px;
+    padding: 16px;
+    .card{
+        display: flex;
+        align-items: flex-end;
+        background-color: var(--primary-color);
+        padding: 1em;
+        margin: 1em;
+        width: auto;
+        height: 14em;
+        color: var(--third-color);
+        .card-footer{
+            width: 50%
+        }
+    }
+}
+

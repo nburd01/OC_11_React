@@ -2,3 +2,31 @@ html, body {
     height: 100%;
     margin: 0;
 }
+
+$card-bg: #fff;
+$card-border: #e0e0e0;
+$card-border-radius: 8px;
+$card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$card-padding: 16px;
+$header-bg: #f7f7f7;
+$header-font-size: 1.5rem;
+$footer-bg: #f7f7f7;
+$primary-color: #FF6060;
+$secondary-color: #000000;
+$third-color: #ffff;
+
+
+:root {
+    --card-bg: #fff;
+    --card-border: #e0e0e0;
+    --card-border-radius: 8px;
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --card-padding: 16px;
+    --header-bg: #f7f7f7;
+    --header-font-size: 1.5rem;
+    --footer-bg: #f7f7f7;
+    --primary-color: #FF6060;
+    --secondary-color: #000000;
+    --third-color: #fff;
+  }
+
