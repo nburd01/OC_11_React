@@ -7,7 +7,6 @@ import ErrorPage from "./routes/error-page";
 
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import Home from "./routes/home";
 
 const router = createBrowserRouter([
   {
