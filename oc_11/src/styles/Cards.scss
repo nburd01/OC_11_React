@@ -1,9 +1,12 @@
 .cards-container{
-    background-color: lightgrey;
+    background-color: var(--fourth-color);
     display: grid;
     grid-template-columns: repeat(var(--items-per-row, 3), 1fr);
     gap: 16px;
     padding: 16px;
+    margin: 4em;
+    border-radius: 10px;
+
     .card{
         display: flex;
         align-items: flex-end;
@@ -11,9 +14,12 @@
         padding: 1em;
         margin: 1em;
         width: auto;
-        height: 14em;
-        color: var(--third-color);
+        min-height: 17em;
+        min-width: 17em;
+        height: auto;
+        border-radius: 10px;
         .card-footer{
+            color: var(--third-color);
             width: 50%
         }
     }

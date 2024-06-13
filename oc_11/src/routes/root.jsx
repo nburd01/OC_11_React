@@ -1,12 +1,11 @@
 import "../styles/App.scss";
 import Cards from "../components/Cards";
+import HorizontalBanner from "../components/HorizontalBanner";
 export default function Root() {
   return (
-    <div className="root">
-      <main>
-        <p>Main content goes here.</p>
-        <Cards />
-      </main>
-    </div>
+    <main>
+      <HorizontalBanner />
+      <Cards />
+    </main>
   );
 }

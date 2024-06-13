@@ -1,3 +1,8 @@
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -14,6 +19,7 @@ $footer-bg: #f7f7f7;
 $primary-color: #FF6060;
 $secondary-color: #000000;
 $third-color: #ffff;
+$fourth-color: #F6F6F6;
 
 
 :root {
@@ -28,5 +34,6 @@ $third-color: #ffff;
     --primary-color: #FF6060;
     --secondary-color: #000000;
     --third-color: #fff;
+    --fourth-color: #F6F6F6;
   }
 
