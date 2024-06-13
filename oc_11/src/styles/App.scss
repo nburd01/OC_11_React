@@ -7,6 +7,11 @@ html, body {
     height: 100%;
     margin: 0;
 }
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
 $card-bg: #fff;
 $card-border: #e0e0e0;
