@@ -11,10 +11,10 @@ function Banner() {
       <nav>
         <ul>
           <li>
-            <a href={`/contacts/1`}>Accueil</a>
+            <a href={`/`}>Accueil</a>
           </li>
           <li>
-            <a href={`/contacts/2`}>A propos</a>
+            <a href={`/about`}>A propos</a>
           </li>
         </ul>
       </nav>
