@@ -13,17 +13,15 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
-    children: [
-      {
-        path: "about",
-        element: <About />,
-      },
-    ],
   },
   {
     path: "logements/:logementId",
     element: <Logement />,
     loader: logementLoader,
+  },
+  {
+    path: "about",
+    element: <About />,
   },
 ]);
 
