@@ -1,30 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Root from "./routes/root";
+import About from "./routes/about";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./routes/error-page";
-
-import Banner from "./components/Banner";
-import Footer from "./components/Footer";
+import Logement, { loader as logementLoader } from "./routes/logement";
+import Root, { loader as rootLoader } from "./routes/root";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+    loader: rootLoader,
+    children: [
+      {
+        path: "about",
+        element: <About />,
+      },
+    ],
   },
   {
-    path: "root",
-    element: <Root />,
+    path: "logements/:logementId",
+    element: <Logement />,
+    loader: logementLoader,
   },
 ]);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Banner />
     <RouterProvider router={router} />
-    <Footer />
   </React.StrictMode>,
   document.getElementById("root")
 );

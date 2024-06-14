@@ -1,7 +1,6 @@
 import "../styles/About.scss";
 
-function About() {
+export default function About() {
   return <div>test</div>;
 }
-
-export default About;
+ 

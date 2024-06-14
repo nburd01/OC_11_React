@@ -1,4 +1,5 @@
 // import Logements from "../data/logements.json";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/kasa_logo.svg";
 import "../styles/Banner.scss";
 
@@ -9,14 +10,8 @@ function Banner() {
         <img src={logo} alt="Kasa logo" className="kasa-logo" />
       </div>
       <nav>
-        <ul>
-          <li>
-            <a href={`/`}>Accueil</a>
-          </li>
-          <li>
-            <a href={`/about`}>A propos</a>
-          </li>
-        </ul>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/about">A propos</NavLink>
       </nav>
     </div>
   );

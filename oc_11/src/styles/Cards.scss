@@ -1,28 +1,40 @@
 .cards-container{
     background-color: var(--fourth-color);
-    display: grid;
-    grid-template-columns: repeat(var(--items-per-row, 3), 1fr);
     gap: 16px;
     padding: 16px;
     margin: 4em;
     border-radius: 10px;
     flex-grow: 1;
+    nav{
+        
+        ul{
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 16px;
+            list-style-type: none;
+            padding: 0;
 
-    .card{
-        display: flex;
-        align-items: flex-end;
-        background-color: var(--primary-color);
-        padding: 1em;
-        margin: 1em;
-        width: auto;
-        min-height: 17em;
-        min-width: 17em;
-        height: auto;
-        border-radius: 10px;
-        .card-footer{
-            color: var(--third-color);
-            width: 50%
+            li{
+                .card{
+                    display: flex;
+                    align-items: flex-end;
+                    background-color: var(--primary-color);
+                    padding: 1em;
+                    margin: 1em;
+                    width: auto;
+                    min-height: 17em;
+                    min-width: 17em;
+                    height: auto;
+                    border-radius: 10px;
+                    .card-footer{
+                        color: var(--third-color);
+                        width: 50%
+                    }
+                }
+            } 
         }
     }
+   
 }
 
