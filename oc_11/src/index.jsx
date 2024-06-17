@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./routes/error-page";
 import Logement, { loader as logementLoader } from "./routes/logement";
 import Root, { loader as rootLoader } from "./routes/root";
+import Home from "./routes/home";
 
 const router = createBrowserRouter([
   {
@@ -13,15 +14,21 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
-  },
-  {
-    path: "logements/:logementId",
-    element: <Logement />,
-    loader: logementLoader,
-  },
-  {
-    path: "about",
-    element: <About />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "logements/:logementId",
+        element: <Logement />,
+        loader: logementLoader,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+    ],
   },
 ]);
 
