@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logements from "../data/logements.json";
+import Banners from "../components/Banners";
 export async function loader() {
   return { logements };
 }
@@ -7,6 +8,14 @@ export async function loader() {
 function Home() {
   return (
     <div className="cards-container">
+      <Banners
+        backgroundImage={
+          require("/home/niall01/OpenClassrooms/p11/oc_11/src/assets/home_banner.svg")
+            .default
+        }
+        text="Chez vous, partout et ailleurs"
+      />
+
       <nav>
         {logements.length ? (
           <ul>

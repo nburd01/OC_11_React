@@ -1,3 +1,4 @@
+// index.jsx
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -12,21 +13,24 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />, // Error element for the Logement route
     loader: rootLoader,
     children: [
       {
         index: true,
         element: <Home />,
+        errorElement: <ErrorPage />, // Error element for the Home route
       },
       {
         path: "logements/:logementId",
         element: <Logement />,
         loader: logementLoader,
+        errorElement: <ErrorPage />, // Error element for the Logement route
       },
       {
         path: "about",
         element: <About />,
+        errorElement: <ErrorPage />, // Error element for the About route
       },
     ],
   },

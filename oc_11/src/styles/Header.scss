@@ -1,0 +1,27 @@
+.header{
+display: flex;
+justify-content: space-between;
+padding:0 3em 0 3em;
+margin: 3em;
+    .kasa-banner {
+        color: black;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        li{
+            padding:1em;
+            list-style-type: none;
+            text-decoration: none;
+            a{
+                color: var(--secondary-color);
+                text-decoration: none;
+
+            }
+            a:active{
+                color: blue ;
+
+            }
+        }
+    }
+}

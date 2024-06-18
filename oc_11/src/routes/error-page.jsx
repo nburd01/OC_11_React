@@ -1,6 +1,8 @@
 import { useRouteError } from "react-router-dom";
 import {} from "../styles/Error-page.scss";
 
+import Footer from "../components/Footer";
+
 export default function ErrorPage() {
   const error = useRouteError();
   console.error(error);
@@ -8,6 +10,7 @@ export default function ErrorPage() {
   return (
     <div id="error-page" className="error-page">
       <div className="errors">
+
         <h1>
           <i className="status">{error.status}</i>
         </h1>
@@ -17,6 +20,7 @@ export default function ErrorPage() {
       </div>
 
       <a href={`/`}>Retourner sur la page d'accueil</a>
+      <Footer />
     </div>
   );
 }

@@ -1,8 +1,6 @@
 .cards-container{
     background-color: var(--fourth-color);
     gap: 16px;
-    padding: 16px;
-    margin: 4em;
     border-radius: 10px;
     flex-grow: 1;
     nav{
@@ -37,4 +35,15 @@
     }
    
 }
+
+@media screen and (max-width: 900px) {
+    .cards-container{
+        nav{
+            ul{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+        
 

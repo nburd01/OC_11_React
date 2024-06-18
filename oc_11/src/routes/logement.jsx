@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import logement from "../data/logements.json";
 import star from "../assets/star-active.svg";
 import inactive_star from "../assets/star-inactive.svg";
+import Dropdown from "../components/Dropdown";
 
 export function loader({ params }) {
   const logements = logement.find((l) => l.id === params.logementId);
@@ -10,7 +11,7 @@ export function loader({ params }) {
   return { logements };
 }
 
-export default function Logement() {
+export default function Logement({ dropdownClass }) {
   const { logements } = useLoaderData();
 
   if (!logements) {
@@ -61,19 +62,14 @@ export default function Logement() {
           </div>
         </div>
       </div>
-      <div className="dropdowns">
-        <div class="dropdown">
-          <span>Description</span>
-          <div class="dropdown-content">{logements.description}</div>
-        </div>
-        <div className="dropdown">
-          <span>Equipements</span>
-          <div className="dropdown-content">
-            {logements.equipments.map((equipement, index) => (
-              <p key={index}>{equipement}</p>
-            ))}
-          </div>
-        </div>
+      <div className="dropdowns flex">
+        <Dropdown title="Description" content={logements.description} />
+        <Dropdown
+          title="Equipements"
+          content={logements.equipments.map((equipement, index) => (
+            <p key={index}>{equipement}</p>
+          ))}
+        />
       </div>
     </div>
   );

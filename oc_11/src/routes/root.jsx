@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import logements from "../data/logements.json";
 import "../styles/App.scss";
 import "../styles/Cards.scss";
-import Banner from "../components/Banner";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export async function loader() {
@@ -11,12 +11,12 @@ export async function loader() {
 
 export default function Root() {
   return (
-    <main>
-      <Banner />
+    <>
+      <Header />
       <main>
         <Outlet />
       </main>
       <Footer />
-    </main>
+    </>
   );
 }

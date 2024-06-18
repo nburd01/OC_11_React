@@ -5,7 +5,12 @@
     flex-grow: 1;
     justify-content: space-evenly;
     .errors{
+        width:100%;
         color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .status{
         font-size: 15vw;
         }
