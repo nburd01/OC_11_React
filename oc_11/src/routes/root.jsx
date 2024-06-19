@@ -12,8 +12,8 @@ export async function loader() {
 export default function Root() {
   return (
     <>
+      <Header />
       <main>
-        <Header />
         <Outlet />
       </main>
       <Footer />
