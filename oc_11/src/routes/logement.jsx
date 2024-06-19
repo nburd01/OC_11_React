@@ -5,6 +5,8 @@ import star from "../assets/star-active.svg";
 import inactive_star from "../assets/star-inactive.svg";
 import Dropdown from "../components/Dropdown";
 import { useState, useEffect } from "react";
+import back from "../assets/arrow_back.svg";
+import next from "../assets/arrow_forward.svg";
 
 export function loader({ params }) {
   const logements = logement.find((l) => l.id === params.logementId);
@@ -41,7 +43,23 @@ export default function Logement({ dropdownClass }) {
 
   return (
     <div id="logements">
-      <img className="logement_banner" src={pictures[pictureIndex]} alt="" />
+      <div className="image-container">
+        <img className="logement_banner" src={pictures[pictureIndex]} alt="" />
+        <div className="overlay-buttons">
+          <img
+            src={back}
+            alt="back"
+            className="back-button"
+            onClick={handlePreviousPicture}
+          />
+          <img
+            src={next}
+            alt="next"
+            className="next-button"
+            onClick={handleNextPicture}
+          />
+        </div>
+      </div>
 
       <div className="logements-info">
         <div className="part1">
