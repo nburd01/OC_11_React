@@ -14,7 +14,7 @@ export function loader({ params }) {
   return { logements };
 }
 
-export default function Logement({ dropdownClass }) {
+export default function Logement() {
   const { logements } = useLoaderData();
   //charge les images dans un array
   const [pictures, updatePictures] = useState([]);
