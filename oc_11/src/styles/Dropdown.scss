@@ -38,3 +38,16 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .dropdowns{
+
+    &.flex {
+      display: block;
+    }
+    .dropdown {
+      margin:0.5em 0 0.5em 0;
+      padding: 0 0.3em;
+    }
+  }
+}

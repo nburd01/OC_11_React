@@ -83,8 +83,16 @@
             }
         }
     }
-
-
-
-
+}
+#logements{
+    .logements-info{
+        display: block;
+        .part1{
+            width: 100%;
+        }
+        .part2{
+            width: 100%;
+            flex-direction: row-reverse;
+        }
+    }
 }
