@@ -13,24 +13,24 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage />, // Error element for the Logement route
+    errorElement: <ErrorPage />,
     loader: rootLoader,
     children: [
       {
         index: true,
         element: <Home />,
-        errorElement: <ErrorPage />, // Error element for the Home route
+        errorElement: <ErrorPage />,
       },
       {
         path: "logements/:logementId",
         element: <Logement />,
         loader: logementLoader,
-        errorElement: <ErrorPage />, // Error element for the Logement route
+        errorElement: <ErrorPage />,
       },
       {
         path: "about",
         element: <About />,
-        errorElement: <ErrorPage />, // Error element for the About route
+        errorElement: <ErrorPage />,
       },
     ],
   },
