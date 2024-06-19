@@ -46,18 +46,22 @@ export default function Logement({ dropdownClass }) {
       <div className="image-container">
         <img className="logement_banner" src={pictures[pictureIndex]} alt="" />
         <div className="overlay-buttons">
-          <img
-            src={back}
-            alt="back"
-            className="back-button"
-            onClick={handlePreviousPicture}
-          />
-          <img
-            src={next}
-            alt="next"
-            className="next-button"
-            onClick={handleNextPicture}
-          />
+          {logements.pictures.length > 1 && (
+            <div>
+              <img
+                src={back}
+                alt="back"
+                className="back-button"
+                onClick={handlePreviousPicture}
+              />
+              <img
+                src={next}
+                alt="next"
+                className="next-button"
+                onClick={handleNextPicture}
+              />
+            </div>
+          )}
         </div>
       </div>
 
