@@ -23,3 +23,8 @@
         object-fit: fill;
     }
 }
+@media screen and (max-width: 900px) {
+    .bannerDiv{
+        padding: 1em;
+    }
+}
