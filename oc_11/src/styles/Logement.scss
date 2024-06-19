@@ -35,6 +35,11 @@
                 width: auto;
             }
         }
+        .overlay-buttons:hover {
+            cursor: pointer;
+        }
+
+        
     }
     .logements-info{
         display: flex;
