@@ -38,7 +38,7 @@
         .overlay-buttons:hover {
             cursor: pointer;
         }
-        
+
         
     }
     .logements-info{
@@ -65,8 +65,9 @@
                 display: flex;
                 .tag{
                     color: white;
+                    padding:0.3em 0.5em 0.3em 0.5em;
                     background-color: var(--primary-color);
-                    padding: 0.3em 2.5em 0.3em 2.5em;
+                   
                     margin: 0.3em 1em 0.3em 0;
                     border-radius: var(--card-border-radius);
                     font-size: 14px;
@@ -116,15 +117,21 @@
         }
     }
 }
-#logements{
-    .logements-info{
-        display: block;
-        .part1{
-            width: 100%;
-        }
-        .part2{
-            width: 100%;
-            flex-direction: row-reverse;
+@media screen and (max-width: 900px) {
+    #logements{
+        .logements-info{
+            display: block;
+            .part1{
+                width: 100%;
+                .tag{
+
+                    padding: 0.3em 2.5em 0.3em 2.5em;
+                }
+            }
+            .part2{
+                width: 100%;
+                flex-direction: row-reverse;
+            }
         }
     }
 }

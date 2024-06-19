@@ -24,7 +24,7 @@ export default function Logement() {
   //when the component mounts this is triggered, and only oncebecause of []
   useEffect(() => {
     updatePictures(logements.pictures);
-  }, []);
+  }, [logements.pictures]);
 
   const handleNextPicture = () => {
     console.log("Current pictures array:", pictures);
