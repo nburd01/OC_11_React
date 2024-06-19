@@ -4,6 +4,7 @@ import logement from "../data/logements.json";
 import star from "../assets/star-active.svg";
 import inactive_star from "../assets/star-inactive.svg";
 import Dropdown from "../components/Dropdown";
+import { useState, useEffect } from "react";
 
 export function loader({ params }) {
   const logements = logement.find((l) => l.id === params.logementId);
@@ -13,17 +14,35 @@ export function loader({ params }) {
 
 export default function Logement({ dropdownClass }) {
   const { logements } = useLoaderData();
+  //charge les images dans un array
+  const [pictures, updatePictures] = useState([]);
+  //permet de défiler les images
+  const [pictureIndex, newPictureIndex] = useState(0);
+
+  //when the component mounts this is triggered, and only oncebecause of []
+  useEffect(() => {
+    updatePictures(logements.pictures);
+  }, []);
+
+  const handleNextPicture = () => {
+    console.log("Current pictures array:", pictures);
+    newPictureIndex((pictureIndex + 1) % pictures.length);
+  };
+  const handlePreviousPicture = () => {
+    console.log("Current pictures array:", pictures);
+    newPictureIndex(
+      (pictureIndex - 1 + logements.pictures.length) % logements.pictures.length
+    );
+  };
 
   if (!logements) {
     return <div>Logement not found</div>;
   }
-  const backgroundImageStyle = {
-    backgroundImage: `url(${logements.cover})`,
-  };
 
   return (
     <div id="logements">
-      <div className="logement_banner" style={backgroundImageStyle}></div>
+      <img className="logement_banner" src={pictures[pictureIndex]} alt="" />
+
       <div className="logements-info">
         <div className="part1">
           <div className="title">

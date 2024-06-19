@@ -1,4 +1,8 @@
 #logements{
+    .picturesCarousel{
+        height: 5em;
+        width: 5em;
+    }
 
     .logement_banner{
         display:block;
@@ -8,6 +12,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        object-fit: cover;
+        // position: absolute;
     }
     .logements-info{
         display: flex;

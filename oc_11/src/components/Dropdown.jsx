@@ -5,9 +5,9 @@ function Dropdown({ title, content, context }) {
 
   return (
     <div className={dropdownClassName}>
-      <div class="dropdown">
+      <div className="dropdown">
         <span>{title}</span>
-        <div class="dropdown-content">{content}</div>
+        <div className="dropdown-content">{content}</div>
       </div>
     </div>
   );
