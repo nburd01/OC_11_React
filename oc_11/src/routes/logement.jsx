@@ -109,9 +109,8 @@ export default function Logement() {
           title="Equipements"
           content={logements.equipments.map((equipement, index) => (
             <p key={index}>{equipement}</p>
-          ))}
-        />
+          ))}/>
       </div>
-    </div>
+      </div>
   );
 }

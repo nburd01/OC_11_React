@@ -1,59 +1,63 @@
 .dropdowns{
-    &.block {
-      display: block;
-    }
-  
-    &.flex {
-      display: flex;
-    }
-    .dropdown {
-        position: relative;
-        display: flex;
-        flex-basis:  auto;
-        flex: 1; 
-        cursor: pointer;
-        box-sizing: border-box; 
-        background-color: var(--primary-color);
-        color: var(--third-color);
-        padding: 0.3em 2.5em 0.3em 2.5em;
-        margin: 0.3em 1em 0.3em 0;
-        border-radius: var(--card-border-radius);
+  &.block {
+    display: block;
+  }
 
-    }
-    
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        flex-basis:  auto;
-        flex: 1; 
-        width: 100%;
-        background-color:  var(--primary-color);
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-        position: relative;
-    }
-  
-    // .dropdown:hover .dropdown-content {
-    //   display: block;
-    // }
-    .arrow-up{
-      position: absolute;
-      top: -5px;
-      right:10px;
-    }
-}
+  &.flex {
+    display: flex;
+  }
 
-@media screen and (max-width: 900px) {
-  .dropdowns{
+  .dropdown {
+    position: relative;
 
-    &.flex {
-      display: block;
-    }
-    .dropdown {
-      margin:0.5em 0 0.5em 0;
-      padding: 0 0.3em;
-    }
+    display: flex;
+    flex-basis:  auto;
+    flex: 1; 
+    cursor: pointer;
+    box-sizing: border-box; 
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    padding: 0.3em 2.5em 0.3em 2.5em;
+    margin: 0.3em 1em 0.3em 0;
+    border-radius: var(--card-border-radius);
+  }
+  .arrow-up{
+    position: absolute;
+    top: -5px;
+    right:10px;
+  }
+  .menu-item{
+    position: absolute;
+    background-color: var(--primary-color);
+    width: inherit;
+  }
+
+  .menu {
+    position: absolute;
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 0;
+    border: var(--fourth-color);
+    width: 100%;
+    top: 1.5em;
+    left: 0;
+  }
+
+  .menu > li {
+    margin:  0;
+    color: var(--secondary-color);
+    background-color: var(--fourth-color);
+  }
+  .menu > li > button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
   }
 }
