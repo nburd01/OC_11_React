@@ -30,6 +30,7 @@
     position: absolute;
     background-color: var(--primary-color);
     width: inherit;
+    z-index: 2;
   }
 
   .menu {
@@ -59,5 +60,13 @@
     margin: 0;
     font: inherit;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .dropdowns{
+    &.flex {
+      flex-direction: column;
+    }
   }
 }
