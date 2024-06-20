@@ -7,15 +7,6 @@ function Dropdown({ title, content, context }) {
   const handleOpen = () => {
     setOpen(!open);
   };
-  const handleMenuOne = () => {
-    // do something
-    setOpen(false);
-  };
-
-  const handleMenuTwo = () => {
-    // do something
-    setOpen(false);
-  };
 
   return (
     <div className="dropdown" onClick={handleOpen}>
@@ -26,7 +17,7 @@ function Dropdown({ title, content, context }) {
       {open ? (
         <ul className="menu">
           <li className="menu-item">
-            <button onClick={handleMenuOne}>{content}</button>
+            <button>{content}</button>
           </li>
         </ul>
       ) : null}
